@@ -1,7 +1,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
          xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <f:section title="Restrict Concurrent Builds per Label">
-    <f:entry title="Restricted Labels" field="restrictedLabels">
+    <f:entry title="Restricted Labels">
       <f:repeatable field="restrictedLabels" add="${%Add Label}" minimum="0">
         <table width="100%">
           <f:entry title="Label Name" field="labelName">
