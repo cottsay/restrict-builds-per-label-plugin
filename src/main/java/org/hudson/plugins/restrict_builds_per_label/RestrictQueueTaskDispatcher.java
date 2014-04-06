@@ -2,21 +2,15 @@ package org.hudson.plugins.restrict_builds_per_label;
 
 import hudson.Extension;
 import hudson.matrix.MatrixConfiguration;
-import hudson.matrix.MatrixProject;
-import hudson.model.AbstractProject;
 import hudson.model.Computer;
 import hudson.model.Executor;
-import hudson.model.Hudson;
 import hudson.model.Node;
-import hudson.model.Queue;
 import hudson.model.Queue.BuildableItem;
 import hudson.model.Queue.Task;
 import hudson.model.Label;
 import hudson.model.labels.LabelAtom;
 import hudson.model.queue.CauseOfBlockage;
 import hudson.model.queue.QueueTaskDispatcher;
-import hudson.model.Run;
-import hudson.util.RunList;
 
 import java.util.ArrayList;
 import java.util.List;
