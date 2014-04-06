@@ -1,0 +1,20 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:section title="Restrict Concurrent Builds per Label">
+    <f:entry title="Restricted Labels" field="restrictedLabels">
+      <f:repeatable field="restrictedLabels" add="${%Add Label}" minimum="0">
+        <table width="100%">
+          <f:entry title="Label Name" field="labelName">
+            <f:textbox />
+          </f:entry>
+          <f:entry title="${%Maximum Concurrent Builds Per Node}" field="maxConcurrentPerNode">
+            <f:textbox />
+          </f:entry>
+        </table>
+        <div align="right">
+          <f:repeatableDeleteButton/>
+        </div>
+      </f:repeatable>
+    </f:entry>
+  </f:section>
+</j:jelly>
