@@ -1,4 +1,4 @@
-package org.hudson.plugins.restrict_builds_per_label;
+package org.jenkinsci.plugins.restrict_builds_per_label;
 
 import hudson.Extension;
 
