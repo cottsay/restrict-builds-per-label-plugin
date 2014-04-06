@@ -51,12 +51,12 @@ public class RestrictQueueTaskDispatcher extends QueueTaskDispatcher {
 
         for (LabelAtom a : nodel) {
             for (LabelAtom b : taskl.listAtoms()) {
-                if (a.getName() == b.getName()) {
+                if (a.getName().equals(b.getName())) {
                     int count = 1;
                     int max = config.maxConcurrentPerNode(a.getName());
                     for (Task t : tlist) {
                         for (LabelAtom c : t.getAssignedLabel().listAtoms()) {
-                            if (a.getName() == c.getName())
+                            if (a.getName().equals(c.getName()))
                                 count++;
                         }
                     }
